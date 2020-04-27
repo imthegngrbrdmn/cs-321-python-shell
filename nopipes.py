@@ -56,7 +56,7 @@ def main(scr):
                 line += chr(c)
                 scr.addch(c)
                 pos+=1
-            elif c == 127 and pos>0:
+            elif (c == 127 or c == 263) and pos>0:
                 pos-=1
                 line = line[:-1]
                 y,x=scr.getyx()
