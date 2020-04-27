@@ -9,6 +9,8 @@ def exec_cmd(command,scr):
     printstuff = True
     if ">" in command:
         filename = command.split(">")[1].strip()
+        command = command.split(">")[0].strip()
+        printstuff = False
     else:
         filename = 'output.txt'
     f_out = open(filename,'w')
