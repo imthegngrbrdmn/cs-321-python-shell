@@ -1,0 +1,16 @@
+Final Project: Shell Written in Python
+Specific functions:
+	help
+	ifconfig
+	routeconfig
+	remote support
+	piping
+	rerouting
+	status
+
+Features
+	tab completion
+	history
+	user cannot break out of shell
+	breadcrumbs
+	symlinks cannot go above home directory
