@@ -35,6 +35,7 @@ def shell_cd(req_path,scr):
 def shell_help(scr):
     scr.addstr("This is my shell written in python for my Operating Systems class. It should run most commands\n")
 def main(scr):
+    histpath = os.path.abspath('./history.txt')
     scr.scrollok(True)
     while True:
         scr.addch('[')
@@ -43,7 +44,7 @@ def main(scr):
         line = ""
         pos = 0
         histpos = 0
-        readhist = open('history.txt','r')
+        readhist = open(histpath,'r')
         histdict = {}
         while True:
             hline = readhist.readline()
@@ -102,7 +103,7 @@ def main(scr):
         elif line == "help":
             shell_help(scr)
         else:
-            hist = open('history.txt','a')
+            hist = open(histpath,'a')
             hist.write(line+"\n")
             hist.close()
             exec_cmd(line,scr)
