@@ -33,6 +33,7 @@ def shell_cd(req_path,scr):
 def shell_help(scr):
     scr.addstr("This is my shell written in python for my Operating Systems class. It should run most commands\n")
 def main(scr):
+    scr.scrollok(True)
     while True:
         scr.addch('[')
         scr.addstr(os.getcwd())
